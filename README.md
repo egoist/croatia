@@ -1,7 +1,7 @@
 
 # croatia
 
-[![NPM version](https://img.shields.io/npm/v/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![NPM downloads](https://img.shields.io/npm/dm/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![travis](https://badgen.net/travis/egoist/croatia/master)](https://travis-ci.org/egoist/croatia)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate) [![chat](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?style=flat)](https://chat.egoist.moe)
+[![NPM version](https://img.shields.io/npm/v/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![NPM downloads](https://img.shields.io/npm/dm/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![travis](https://badgen.net/travis/egoist/croatia/master?a)](https://travis-ci.org/egoist/croatia)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate) [![chat](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?style=flat)](https://chat.egoist.moe)
 
 ## Motivation
 
@@ -35,6 +35,8 @@ This preview demonstrates:
 ### spawn(cmd, [args], [opts])
 
 The same as `child_process.spawn`. But `opts.stdio` is always `pipe`.
+
+Returns a Promise which resolves to the created child process.
 
 ## Contributing
 

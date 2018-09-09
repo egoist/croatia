@@ -1,0 +1,32 @@
+{
+  "name": "croatia",
+  "version": "0.0.0",
+  "description": "Spawn a process and clear its output when succeded.",
+  "repository": {
+    "url": "egoist/croatia",
+    "type": "git"
+  },
+  "main": "index.js",
+  "files": [
+    "index.js"
+  ],
+  "scripts": {
+    "test": "npm run lint && echo 'no tests!'",
+    "lint": "xo"
+  },
+  "author": "egoist <0x142857@gmail.com>",
+  "license": "MIT",
+  "dependencies": {
+    "cross-spawn": "^6.0.5",
+    "strip-ansi": "^4.0.0",
+    "wcwidth": "^1.0.1"
+  },
+  "devDependencies": {
+    "eslint-config-rem": "^3.0.0",
+    "xo": "^0.18.0"
+  },
+  "xo": {
+    "extends": "rem",
+    "ignores": ["examples/**"]
+  }
+}

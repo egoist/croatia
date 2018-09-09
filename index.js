@@ -3,18 +3,14 @@ const stripAnsi = require('strip-ansi')
 const wcwidth = require('wcwidth')
 
 exports.spawn = (cmd, args, opts) =>
-  new Promise(resolve => {
+  new Promise((resolve, reject) => {
     const cpOptions = Object.assign({}, opts, {
-      stdio: 'pipe'
+      stdio: [process.stdin, 'pipe', 'pipe']
     })
     const { banner } = cpOptions
     delete cpOptions.banner
 
-    const cp = spawn(
-      cmd,
-      args,
-      cpOptions
-    )
+    const cp = spawn(cmd, args, cpOptions)
 
     let output = banner ? `${banner}\n` : ''
     const stream = process.stderr
@@ -33,6 +29,7 @@ exports.spawn = (cmd, args, opts) =>
       stream.write(data)
     })
 
+    cp.on('error', reject)
     cp.on('close', code => {
       // Clear output when succeeded
       if (code === 0) {

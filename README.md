@@ -36,7 +36,7 @@ This preview demonstrates:
 
 Almost identical to `child_process.spawn`.
 
-Returns a Promise which resolves to the created child process.
+Returns a Promise which resolves to the created child process, the Promise will never be rejected.
 
 #### options
 

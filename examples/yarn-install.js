@@ -7,6 +7,8 @@ spawn('yarn', ['add', 'pokemonxxx'], {
     npm_config_progress: true
   }, process.env),
   banner: 'Installing pokemon...'
-}).catch(cp => {
-  console.log(`Failed with code ${cp.exitCode}`)
+}).then(cp => {
+  if (cp.exitCode !== 0) {
+    console.log(`Failed with code ${cp.exitCode}`)
+  }
 })

@@ -3,7 +3,7 @@ const stripAnsi = require('strip-ansi')
 const wcwidth = require('wcwidth')
 
 exports.spawn = (cmd, args, opts) =>
-  new Promise((resolve, reject) => {
+  new Promise(resolve => {
     const cpOptions = Object.assign({}, opts, {
       stdio: 'pipe'
     })
@@ -49,9 +49,7 @@ exports.spawn = (cmd, args, opts) =>
           stream.clearLine()
           stream.cursorTo(0)
         }
-        resolve(cp)
-      } else {
-        reject(cp)
       }
+      resolve(cp)
     })
   })

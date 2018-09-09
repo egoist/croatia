@@ -1,7 +1,7 @@
 
 # croatia
 
-[![NPM version](https://img.shields.io/npm/v/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![NPM downloads](https://img.shields.io/npm/dm/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![CircleCI](https://circleci.com/gh/egoist/croatia/tree/master.svg?style=shield)](https://circleci.com/gh/egoist/croatia/tree/master)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate) [![chat](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?style=flat)](https://chat.egoist.moe)
+[![NPM version](https://img.shields.io/npm/v/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![NPM downloads](https://img.shields.io/npm/dm/croatia.svg?style=flat)](https://npmjs.com/package/croatia) [![travis](https://badgen.net/travis/egoist/croatia/master)](https://travis-ci.org/egoist/croatia)  [![donate](https://img.shields.io/badge/$-donate-ff69b4.svg?maxAge=2592000&style=flat)](https://github.com/egoist/donate) [![chat](https://img.shields.io/badge/chat-on%20discord-7289DA.svg?style=flat)](https://chat.egoist.moe)
 
 ## Motivation
 

@@ -1,6 +1,6 @@
 {
   "name": "croatia",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "Spawn a process and clear its output when succeded.",
   "repository": {
     "url": "egoist/croatia",

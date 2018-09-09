@@ -4,16 +4,24 @@ const wcwidth = require('wcwidth')
 
 exports.spawn = (cmd, args, opts) =>
   new Promise((resolve, reject) => {
+    const cpOptions = Object.assign({}, opts, {
+      stdio: 'pipe'
+    })
+    const { banner } = cpOptions
+    delete cpOptions.banner
+
     const cp = spawn(
       cmd,
       args,
-      Object.assign({}, opts, {
-        stdio: 'pipe'
-      })
+      cpOptions
     )
 
-    let output = ''
+    let output = banner ? `${banner}\n` : ''
     const stream = process.stderr
+
+    if (output) {
+      stream.write(output)
+    }
 
     cp.stdout.setEncoding('utf8').on('data', data => {
       output += data

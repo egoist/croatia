@@ -5,7 +5,8 @@ spawn('yarn', ['add', 'pokemonxxx'], {
     FORCE_COLOR: true,
     npm_config_color: 'always',
     npm_config_progress: true
-  }, process.env)
+  }, process.env),
+  banner: 'Installing pokemon...'
 }).catch(cp => {
   console.log(`Failed with code ${cp.exitCode}`)
 })

@@ -32,11 +32,18 @@ This preview demonstrates:
 
 ## API
 
-### spawn(cmd, [args], [opts])
+### spawn(cmd, [args], [options])
 
-The same as `child_process.spawn`. But `opts.stdio` is always `pipe`.
+Almost identical to `child_process.spawn`.
 
 Returns a Promise which resolves to the created child process.
+
+#### options
+
+All options in [child_process.spawn](https://nodejs.org/dist/latest-v10.x/docs/api/child_process.html#child_process_child_process_spawn_command_args_options) are available here, plus:
+
+- `options.stdio` is always `pipe`
+- `options.banner`: `string` Output a message before the process is spawned.
 
 ## Contributing
 
